@@ -252,3 +252,33 @@ lo        Link encap:Local Loopback
   ^C
   vagrant@docker-node1:~$
 ```
+## vagrant 的同步文件配置无法生效解决办法
+
+配置主机与虚机同步共享的文件夹
+
+```
+config.vm.synced_folder "./labs", "/home/vagrant/labs"
+```
+
+重新载入后报错
+
+```
+Vagrant was unable to mount VirtualBox shared folders. This is usually
+because the filesystem "vboxsf" is not available. This filesystem is
+made available via the VirtualBox Guest Additions and kernel module.
+Please verify that these guest additions are properly installed in the
+guest. This is not a bug in Vagrant and is usually caused by a faulty
+Vagrant box. For context, the command attempted was:
+
+mount -t vboxsf -o uid=1000,gid=1000 home_vagrant_labs /home/vagrant/labs
+
+The error output from the command was:
+
+mount: unknown filesystem type 'vboxsf'
+```
+
+解决办法
+
+```
+vagrant plugin install vagrant-vbguest
+```
