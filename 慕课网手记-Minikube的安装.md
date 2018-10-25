@@ -144,4 +144,3 @@ dab3d03f880b        d166ffa9201a                               "/opt/kube-addons
 Opening kubernetes dashboard in default browser...
 ➜  ~
 ```
-
