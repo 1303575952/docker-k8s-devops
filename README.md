@@ -2,12 +2,6 @@
 
 本代码仓库会不定期进行更新。
 
-## 关于翻墙
-
-本课程里部分link可能需要翻墙，大家如果自己没有VPN的话，可以尝试蓝灯
-
-https://github.com/getlantern/forum
-
 ## 本课程的一些常用链接汇总
 
 Vagrant下载 https://www.vagrantup.com/downloads.html
